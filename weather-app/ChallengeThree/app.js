@@ -13,7 +13,7 @@ Goal: Create a reusable fuction for getting the forecast
     - Success, pass forecast string for data (same format as from before)
 */
 
-forecast('curico', (error, data) => {
+forecast(-75.7088, 44.1545, (error, data) => {
     console.log('Error', error);
     console.log('Data', data);
 })
