@@ -5,7 +5,6 @@ const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
 
-
 /*
 Goal: Render content to paragraphs
 1. Select the second message p  from Javascript
@@ -18,7 +17,10 @@ Goal: Render content to paragraphs
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const location = search.value
-    console.log(location);
+        // console.log(location);
+
+    messageOne.textContent = 'Loading...';
+    messageTwo.textContent = ''
 
     fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
